@@ -18,10 +18,12 @@ You can use this plugin by adding jar file or by including maven dependency in y
 
 ## How it works:
 
-### Returning a RSelenium::WebElement with which you can access like you used to.
+
 
 ## Methods:
-  
+
+Depending on the method, either a RSelenium::WebElement or a boolean is returned.
+You can access the RSelenium::WebElement like you used to.
 
 `find_element(shadowObject, css_selector)`:
 Use this method if want single element from DOM
