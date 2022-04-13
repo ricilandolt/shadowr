@@ -1,11 +1,26 @@
 Package: shadowr
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Selenium plugin to manage multi level shadow DOM elements on web page
+Version: 0.0.1
+Author: c(
+  person("Ricardo", "Landolt", email = "XX@XX.com", role = c("cre","aut")), 
+  person("Sushil","Gupta"," role=c("ctb", "cph"),comment="shadow-automation-selenium plugin"))
+Maintainer: The package maintainer <ricardo.landolt1@gmail.com>
+Description: Shadow DOM is a web standard that offers component style and markup encapsulation. 
+  It is a critically important piece of the Web Components story as it ensures that a component will work in any environment even if other CSS or JavaScript is at play on the page.
+  Custom HTML tags can't be directly identified with selenium tools, because Selenium doesn't provide any way to deal with shadow-dom elements. 
+  Using this plugin you can handle any custom HTML tags.
+License: Apache License 2.0
+URL: https://github.com/ricilandolt/shadowr
+BugReports: https://github.com/ricilandolt/shadowr/issues
+Depends:
+  R (>= 3.0.0)
+Imports:
+  RSelenium(>= 1.7.7),
+  methods
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
