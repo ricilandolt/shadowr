@@ -72,12 +72,12 @@ You can use this plugin by adding jar file or by including maven dependency in y
 ###### How to use this plugin:
   You will have to install this plugin from PyPi.
   
-  **Maven**
+## Installation
   ```
-  pip install pyshadow
+  install.packages("tidyverse")
 
 ```
-install.packages("tidyverse")
+
 ## Selector:
   ###### Examples: 
   for html tag ``` <paper-tab title="Settings"> ```
