@@ -29,76 +29,40 @@ Use this if you want to find a single elements from parent object DOM
 `find_elements(str css_selector)`:
 Use this if you want to find all elements from DOM
 
-
-
-
-find_elements(object parent, str css_selector):
+`find_elements(object parent, str css_selector)`:
 Use this if you want to find all elements from parent object DOM
 
-
-
-
-get_shadow_element(object parent,str css_selector):
+`get_shadow_element(object parent,str css_selector)`:
 Use this if you want to find a single element from parent DOM
 
-
-
-
-get_all_shadow_element(object parent, str css_selector):
+`get_all_shadow_element(object parent, str css_selector)`:
 Use this if you want to find all elements from parent DOM
 
-
-
-
-get_parent_element(object element):
+`get_parent_element(object element)`:
 Use this to get the parent element if web element
 
-
-
-
-get_child_elements(object parent) :
+`get_child_elements(object parent)`:
 Use this to get all the child elements of parent element
 
-
-
-
-get_sibling_element(object element, str css_selector):
+`get_sibling_element(object element, str css_selector)`:
 Use this to get adjacent(sibling) element using css selector
 
-
-
-
-get_previous_sibling_element(object element):
+`get_previous_sibling_element(object element)`:
 Use this to get previous adjacent(sibling) element
 
-
-
-
-get_next_sibling_element(object element):
+`get_next_sibling_element(object element)`:
 Use this to get next adjacent(sibling) element
 
-
-
-
-scroll_to(object element):
+`scroll_to(object element)`:
 Use this to scroll to web element
 
-
-
-
-is_checked(object element):
+`is_checked(object element)`:
 Use this if you want to check if checkbox is selected
 
-
-
-
-is_disabled(object element):
+`is_disabled(object element)`:
 Use this if you want to check if element is disabled
 
-
-
-
-is_visible(object element):
+`is_visible(object element)`:
 Use this if you want to find visibility of element
   
  
