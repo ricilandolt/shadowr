@@ -80,26 +80,35 @@ You can use this plugin by adding jar file or by including maven dependency in y
   ###### Examples: 
   for html tag ``` <paper-tab title="Settings"> ```
   You can use this code in your framework to grab the paper-tab element Object.
-  ```python
-from selenium import webdriver
-from pyshadow.main import Shadow
-from webdriver_manager.chrome import ChromeDriverManager
-driver = webdriver.Chrome(ChromeDriverManager().install())
-shadow = Shadow(driver)
-element = shadow.find_element("paper-tab[title='Settings']")
-elements = shadow.find_elements("paper-tab[title='Settings']")
-text = element.text
+  ```r
+library(shadowr)
+library(RSelenium)
+remDr <- RSelenium::remoteDriver(
+  remoteServerAddr = "host.docker.internal",
+  port = 4445 , browser = "chrome")
+remDr$open(silent = TRUE)
+remDr$navigate(url)
+shadow_rd <- shadow(remDr)
+element <- find_element(shadow_rd, 'paper-tab[title="Settings"]')
+elements <- find_elements(shadow_rd, 'paper-tab[title="Settings"]')
+element$getElementText()
+
   ```
   for html tag that resides under a shadow-root dom element ``` <input title="The name of the employee"> ```
   You can use this code in your framework to grab the paper-tab element Object.
-  ```python
-from selenium import webdriver
-from pyshadow.main import Shadow
-from webdriver_manager.chrome import ChromeDriverManager
-driver = webdriver.Chrome(ChromeDriverManager().install())
-shadow = Shadow(driver)
-element = shadow.find_element("input[title='The name of the employee']")
-text = element.text
+  ```r
+library(shadowr)
+library(RSelenium)
+remDr <- RSelenium::remoteDriver(
+  remoteServerAddr = "host.docker.internal",
+  port = 4445 , browser = "chrome")
+remDr$open(silent = TRUE)
+remDr$navigate(url)
+shadow_rd <- shadow(remDr)
+element <- find_element(shadow_rd, 'input[title="The name of the employee"]')
+elements <- find_elements(shadow_rd, 'input[title="The name of the employee"]')
+element$getElementText()
+
   ```
   for html tag that resides under a shadow-root dom element 
   ```html 
@@ -108,14 +117,17 @@ text = element.text
 </properties-page>
   ```
   You can use this code in your framework to grab the textarea element Object.
-  ```python
-from selenium import webdriver
-from pyshadow.main import Shadow
-from webdriver_manager.chrome import ChromeDriverManager
-driver = webdriver.Chrome(ChromeDriverManager().install())
-shadow = Shadow(driver)
-element = shadow.find_element("properties-page#settingsPage>textarea#textarea")
-text = element.text
+  ```r
+library(shadowr)
+library(RSelenium)
+remDr <- RSelenium::remoteDriver(
+  remoteServerAddr = "host.docker.internal",
+  port = 4445 , browser = "chrome")
+remDr$open(silent = TRUE)
+remDr$navigate(url)
+shadow_rd <- shadow(remDr)
+element <- find_element(shadow_rd, "properties-page#settingsPage>textarea#textarea")
+element$getElementText()
   ```
   
   ###### Note: > is used to combine multi level dom structure. So you can combine 5 levels of dom. If you want some more level modify the script and ready to rock.
