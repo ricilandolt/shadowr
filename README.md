@@ -18,6 +18,8 @@ You can use this plugin by adding jar file or by including maven dependency in y
 
 ## How it works:
 
+### Returning a RSelenium::WebElement with which you can access like you used to.
+
 ## Methods:
   
 
