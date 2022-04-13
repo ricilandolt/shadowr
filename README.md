@@ -69,9 +69,7 @@ You can use this plugin by adding jar file or by including maven dependency in y
   
   `scroll_to(object element)` : use this to scroll to web element.
   
-###### How to use this plugin:
-  You will have to install this plugin from PyPi.
-  
+ 
 ## Installation
   ```
   install.packages("tidyverse")
