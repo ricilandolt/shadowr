@@ -25,13 +25,13 @@ You can use this plugin by adding jar file or by including maven dependency in y
 Use this method if want single element from DOM
 
 `find_element(shadowObject, element, css_selector)`:
-Use this if you want to find a single elements from parent object DOM
+Use this if you want to find a single elements from parent object
 
 `find_elements(shadowObject, css_selector)`:
 Use this if you want to find all elements from DOM
 
 `find_elements(shadowObject, element, css_selector)`:
-Use this if you want to find all elements from parent object DOM
+Use this if you want to find all elements from parent object
 
 `get_shadow_element(shadowObject, element,css_selector)`:
 Use this if you want to find a single element from parent DOM
