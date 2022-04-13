@@ -119,15 +119,6 @@ element = shadow.find_element("properties-page#settingsPage>textarea#textarea")
 text = element.text
   ```
   
-  ## Wait: Implicit and Explicit
-If you want to use wait to synchronize your scripts then you should use the implicit or explicit wait feature.
-
-* For Implicit wait, you can use **shadow.set_implicit_wait(int seconds)** method.
-* For Explicit wait, you can use **shadow.set_explicit_wait(int seconds, int pollingTime)** method.
-
-* In Implicit wait, the driver will wait for at least n seconds as set in **shadow.set_implicit_wait(n)**.
-* In Explicit wait, the driver will wait for at max n seconds as set in **shadow.set_implicit_wait(n,m)**. In between driver will check for presence of WebElement every m seconds.
-  
   ###### Note: > is used to combine multi level dom structure. So you can combine 5 levels of dom. If you want some more level modify the script and ready to rock.
   
-  **Documentation** [Link](https://github.com/sukgu/pyshadow/wiki)
+
