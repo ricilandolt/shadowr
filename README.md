@@ -75,8 +75,9 @@ You can use this plugin by adding jar file or by including maven dependency in y
   **Maven**
   ```
   pip install pyshadow
-  ```
-  
+
+```
+install.packages("tidyverse")
 ## Selector:
   ###### Examples: 
   for html tag ``` <paper-tab title="Settings"> ```
