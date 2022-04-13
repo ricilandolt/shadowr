@@ -19,55 +19,87 @@ You can use this plugin by adding jar file or by including maven dependency in y
 ## How it works:
 
 ## Methods:
-  `find_element(str css_selector)` : use this method if want single element from DOM
+  
+`find_element(css_selector)`:
+Use this method if want single element from DOM
 
-  `find_elements(str css_selector)` : use this if you want to find all elements from DOM
-  
-  `find_element(object parent, str css_selector)` : use this if you want to find a single elements from parent object DOM
-  
-  `find_elements(object parent, str css_selector)` : use this if you want to find all elements from parent object DOM
-  
-  `set_implicit_wait(int seconds)` : use this method for implicit wait
-    
-  `set_explicit_wait(int seconds, int polling_time) raise Exception` : use this method for explicit wait
-  
-  `get_shadow_element(object parent,str css_selector)` : use this if you want to find a single element from parent DOM
-  
-  `get_all_shadow_element(object parent, str css_selector)` : use this if you want to find all elements from parent DOM
-  
-  `get_parent_element(object element)` : use this to get the parent element if web element.
-  
-  `get_child_elements(object parent)` : use this to get all the child elements of parent element.
-  
-  `get_sibling_elements(object element)` : use this to get all adjacent (sibling) elements.
-  
-  `get_sibling_element(object element, str css_selector)` : use this to get adjacent(sibling) element using css selector.
-  
-  `get_next_sibling_element(object element)` : use this to get next adjacent(sibling) element.
-  
-  `get_previous_sibling_element(object element)` : use this to get previous adjacent(sibling) element..
-  
-  `is_visible(object element)` : use this if you want to find visibility of element
-  
-  `is_checked(object element)` : use this if you want to check if checkbox is selected 
-  
-  `is_disabled(object element)` : use this if you want to check if element is disabled
-  
-  `get_attribute(object element, str attribute)` : use this if you want to get attribute like aria-selected and other custom attributes of elements.
-  
-  `select_checkbox(str label)` : use this to select checkbox element using label.
-  
-  `select_checkbox(object parent, str label)` : use this to select checkbox element using label.
-  
-  `select_radio(str label)` : use this to select radio element using label.
-  
-  `select_radio(object parent, str label)` : use this to select radio element from parent DOM using label.
-  
-  `select_dropdown(str label)` : use this to select dropdown list item using label (use this if only one dropdown is present or loaded on UI).
-  
-  `select_dropdown(object parent, str label)` : use this to select dropdown list item from parent DOM using label.
-  
-  `scroll_to(object element)` : use this to scroll to web element.
+`find_element(object parent, str css_selector)` :
+Use this if you want to find a single elements from parent object DOM
+
+`find_elements(str css_selector)`:
+Use this if you want to find all elements from DOM
+
+
+
+
+find_elements(object parent, str css_selector):
+Use this if you want to find all elements from parent object DOM
+
+
+
+
+get_shadow_element(object parent,str css_selector):
+Use this if you want to find a single element from parent DOM
+
+
+
+
+get_all_shadow_element(object parent, str css_selector):
+Use this if you want to find all elements from parent DOM
+
+
+
+
+get_parent_element(object element):
+Use this to get the parent element if web element
+
+
+
+
+get_child_elements(object parent) :
+Use this to get all the child elements of parent element
+
+
+
+
+get_sibling_element(object element, str css_selector):
+Use this to get adjacent(sibling) element using css selector
+
+
+
+
+get_previous_sibling_element(object element):
+Use this to get previous adjacent(sibling) element
+
+
+
+
+get_next_sibling_element(object element):
+Use this to get next adjacent(sibling) element
+
+
+
+
+scroll_to(object element):
+Use this to scroll to web element
+
+
+
+
+is_checked(object element):
+Use this if you want to check if checkbox is selected
+
+
+
+
+is_disabled(object element):
+Use this if you want to check if element is disabled
+
+
+
+
+is_visible(object element):
+Use this if you want to find visibility of element
   
  
 ## Installation
