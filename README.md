@@ -73,7 +73,6 @@ You can use this plugin by adding jar file or by including maven dependency in y
 ## Installation
   ```
   install.packages("tidyverse")
-
 ```
 
 ## Selector:
