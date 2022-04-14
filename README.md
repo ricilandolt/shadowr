@@ -1,7 +1,7 @@
 # shadowr
 Selenium plugin to manage multi level shadow DOM elements on web page.
 
-[![codecov](https://codecov.io/gh/ricilandolt/shadowr/branch/master/graph/badge.svg?token=lLHxbUQ7cG)](https://codecov.io/gh/ricilandolt/shadowr)
+[![codecov](https://app.codecov.io/gh/ricilandolt/shadowr/branch/master/graph/badge.svg?token=lLHxbUQ7cG)](https://codecov.io/gh/ricilandolt/shadowr)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![R-CMD-check](https://github.com/ricilandolt/shadowr/workflows/R-CMD-check/badge.svg)](https://github.com/ricilandolt/shadowr/actions)
 
