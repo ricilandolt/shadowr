@@ -1,14 +1,13 @@
 Package: shadowr
 Type: Package
-Title: Selenium plugin to manage multi level shadow DOM elements on web page
+Title: Selenium Plugin to Manage Multi Level Shadow Elements on Web Page
 Version: 0.0.1
-Author: c(
-  person("Ricardo", "Landolt", email = "XX@XX.com", role = c("cre","aut")), 
-  person("Sushil","Gupta"," role=c("ctb", "cph"),comment="shadow-automation-selenium plugin"))
-Maintainer: The package maintainer <ricardo.landolt1@gmail.com>
-Description: Shadow DOM is a web standard that offers component style and markup encapsulation. 
+Authors@R: c(person("Ricardo","Landolt", email = "ricardo.landolt1@gmail.com", role
+        = c("cre","aut")), person("Sushil", "Gupta", email =
+        "Michiel.Stock@UGent.be", role = "ctb",comment="shadow-automation-selenium plugin"))
+Description: Shadow Document Object Model is a web standard that offers component style and markup encapsulation. 
   It is a critically important piece of the Web Components story as it ensures that a component will work in any environment even if other CSS or JavaScript is at play on the page.
-  Custom HTML tags can't be directly identified with selenium tools, because Selenium doesn't provide any way to deal with shadow-dom elements. 
+  Custom HTML tags can't be directly identified with selenium tools, because Selenium doesn't provide any way to deal with shadow elements. 
   Using this plugin you can handle any custom HTML tags.
 License: Apache License 2.0
 URL: https://github.com/ricilandolt/shadowr

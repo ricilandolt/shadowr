@@ -1,6 +1,6 @@
 
-#' @title Convert JS File
-#' @description reads the js file
+#' @title Convert Plugin File
+#' @description reads the Plugin file
 #' @keywords internal
 
 

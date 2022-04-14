@@ -1,8 +1,8 @@
 
-#' @title Shadow Class Constructer
-#' @description This is a Class Constructer funtion to create a shadow class and are able to use the
-#' Selenium plugin to manage multi level shadow DOM elements on a web page.
-#' @param driver The shadow class takes a RSelenium RemoteDriver
+#' @title Shadow Class Constructor
+#' @description This is a Class Constructor function to create a shadow class and are able to use the
+#' Selenium plugin to manage multiple levels of shadow elements on a web page.
+#' @param driver The shadow class takes a R Selenium Remote Driver
 #' @import methods
 #' @import RSelenium
 #' @keywords shadow

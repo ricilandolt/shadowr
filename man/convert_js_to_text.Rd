@@ -2,11 +2,11 @@
 % Please edit documentation in R/convert_js_to_text.R
 \name{convert_js_to_text}
 \alias{convert_js_to_text}
-\title{Convert JS File}
+\title{Convert Plugin File}
 \usage{
 convert_js_to_text()
 }
 \description{
-reads the js file
+reads the Plugin file
 }
 \keyword{internal}

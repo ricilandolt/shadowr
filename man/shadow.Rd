@@ -2,16 +2,16 @@
 % Please edit documentation in R/shadowr.R
 \name{shadow}
 \alias{shadow}
-\title{Shadow Class Constructer}
+\title{Shadow Class Constructor}
 \usage{
 shadow(driver)
 }
 \arguments{
-\item{driver}{The shadow class takes a RSelenium RemoteDriver}
+\item{driver}{The shadow class takes a R Selenium Remote Driver}
 }
 \description{
-This is a Class Constructer funtion to create a shadow class and are able to use the
-Selenium plugin to manage multi level shadow DOM elements on a web page.
+This is a Class Constructor function to create a shadow class and are able to use the
+Selenium plugin to manage multiple levels of shadow elements on a web page.
 }
 \seealso{
 \code{\link{shadow-class}} or

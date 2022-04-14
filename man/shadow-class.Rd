@@ -33,114 +33,152 @@
 \alias{is_visible,shadow,webElement-method}
 \title{CLASS shadow}
 \usage{
-\dontshow{}
-The following methods can be used with the shadow Class
+find_element(shadowObject, css_selector, element)
 
-\dontshow{}
-\strong{find_element}(css_selector) :
-Use this method if want single element from DOM
-\cr
+\S4method{find_element}{shadow,character,missing}(shadowObject, css_selector, element)
 
-\dontshow{}
-\strong{find_element}(object parent, str css_selector):
-Use this if you want to find a single elements from parent object DOM
+\S4method{find_element}{shadow,character,webElement}(shadowObject, css_selector, element)
 
-\dontshow{}
+find_elements(shadowObject, css_selector, element)
 
-\dontshow{}
-\strong{find_elements}(str css_selector):
-Use this if you want to find all elements from DOM
-\cr
+\S4method{find_elements}{shadow,character,missing}(shadowObject, css_selector, element)
 
-\dontshow{}
-\strong{find_elements}(object parent, str css_selector):
-Use this if you want to find all elements from parent object DOM
+\S4method{find_elements}{shadow,character,webElement}(shadowObject, css_selector, element)
 
-\dontshow{}
+get_shadow_element(shadowObject, element, css_selector)
 
-\dontshow{}
-\strong{get_shadow_element}(object parent,str css_selector):
-Use this if you want to find a single element from parent DOM
+\S4method{get_shadow_element}{shadow,webElement,character}(shadowObject, element, css_selector)
 
-\dontshow{}
+get_all_shadow_element(shadowObject, element, css_selector)
 
-\dontshow{}
-\strong{get_all_shadow_element}(object parent, str css_selector):
-Use this if you want to find all elements from parent DOM
+\S4method{get_all_shadow_element}{shadow,webElement,character}(shadowObject, element, css_selector)
 
-\dontshow{}
+get_parent_element(shadowObject, element)
 
-\dontshow{}
-\strong{get_parent_element}(object element):
-Use this to get the parent element if web element
+\S4method{get_parent_element}{shadow,webElement}(shadowObject, element)
 
-\dontshow{}
+get_child_elements(shadowObject, element)
 
-\dontshow{}
-\strong{get_child_elements}(object parent) :
-Use this to get all the child elements of parent element
+\S4method{get_child_elements}{shadow,webElement}(shadowObject, element)
 
-\dontshow{}
+get_sibling_element(shadowObject, element, css_selector)
 
-\dontshow{}
-\strong{get_sibling_element}(object element, str css_selector):
-Use this to get adjacent(sibling) element using css selector
+\S4method{get_sibling_element}{shadow,webElement,character}(shadowObject, element, css_selector)
 
-\dontshow{}
+get_previous_sibling_element(shadowObject, element)
 
-\dontshow{}
-\strong{get_previous_sibling_element}(object element):
-Use this to get previous adjacent(sibling) element
+\S4method{get_previous_sibling_element}{shadow,webElement}(shadowObject, element)
 
-\dontshow{}
+get_next_sibling_element(shadowObject, element)
 
-\dontshow{}
-\strong{get_next_sibling_element}(object element):
-Use this to get next adjacent(sibling) element
+\S4method{get_next_sibling_element}{shadow,webElement}(shadowObject, element)
 
-\dontshow{}
+scroll_to(shadowObject, element)
 
-\dontshow{}
-\strong{scroll_to}(object element):
-Use this to scroll to web element
+\S4method{scroll_to}{shadow,webElement}(shadowObject, element)
 
-\dontshow{}
+is_checked(shadowObject, element)
 
-\dontshow{}
-\strong{is_checked}(object element):
-Use this if you want to check if checkbox is selected
+\S4method{is_checked}{shadow,webElement}(shadowObject, element)
 
-\dontshow{}
+is_disabled(shadowObject, element)
 
-\dontshow{}
-\strong{is_disabled}(object element):
-Use this if you want to check if element is disabled
+\S4method{is_disabled}{shadow,webElement}(shadowObject, element)
 
-\dontshow{}
+is_visible(shadowObject, element)
 
-\dontshow{}
-\strong{is_visible}(object element):
-Use this if you want to find visibility of element
+\S4method{is_visible}{shadow,webElement}(shadowObject, element)
 }
 \arguments{
-\item{theObject}{the shadow class}
+\item{shadowObject}{the shadow class}
 
-\item{css_selector}{a css string to find a webelement}
+\item{css_selector}{selector string to find a web element}
 
-\item{element}{a RSelenium webelement}
+\item{element}{a web element}
+}
+\value{
+Depends on the method, either a \code{RSelenium::WebElement} or a \code{boolean}.
 }
 \description{
-Selenium plugin to manage multi level shadow DOM elements on web page.
+Selenium plugin to manage multiple levels of shadow elements on web page. Returning a \code{RSelenium::WebElement} which you can access like you used to.
 }
+\section{Functions}{
+\itemize{
+\item \code{find_element,shadow,character,missing-method}: Use this method if want single element
+
+\item \code{find_element,shadow,character,webElement-method}: Use this if you want to find a single elements from parent object
+
+\item \code{find_elements,shadow,character,missing-method}: Use this if you want to find all elements
+
+\item \code{find_elements,shadow,character,webElement-method}: Use this if you want to find all elements from parent object
+
+\item \code{get_shadow_element,shadow,webElement,character-method}: Use this if you want to find a single element from parent
+
+\item \code{get_all_shadow_element,shadow,webElement,character-method}: Use this if you want to find all elements from parent
+
+\item \code{get_parent_element,shadow,webElement-method}: Use this to get the parent element if web element
+
+\item \code{get_child_elements,shadow,webElement-method}: Use this to get all the child elements of parent element
+
+\item \code{get_sibling_element,shadow,webElement,character-method}: Use this to get adjacent(sibling) element
+
+\item \code{get_previous_sibling_element,shadow,webElement-method}: Use this to get previous adjacent(sibling) element
+
+\item \code{get_next_sibling_element,shadow,webElement-method}: Use this to get next adjacent(sibling) element
+
+\item \code{scroll_to,shadow,webElement-method}: Use this to scroll to web element
+
+\item \code{is_checked,shadow,webElement-method}: Use this if you want to check if checkbox is selected
+
+\item \code{is_disabled,shadow,webElement-method}: Use this if you want to check if element is disabled
+
+\item \code{is_visible,shadow,webElement-method}: Use this if you want to find visibility of element
+}}
+
 \section{Slots}{
 
 \describe{
-\item{\code{driver}}{The shadow class takes a RSelenium RemoteDriver}
+\item{\code{driver}}{The shadow class takes a Remote Driver}
 
 \item{\code{javascript_library}}{the selenium plugin}
 }}
 
+\examples{
+\dontrun{
+library(shadowr)
+library(RSelenium)
+remDr <- RSelenium::remoteDriver(
+remoteServerAddr = "host.docker.internal",
+port = 4445 , browser = "chrome")
+remDr$open(silent = TRUE)
+remDr$navigate(url)
+shadow_rd <- shadow(remDr)
+element <- find_element(shadow_rd, 'paper-tab[title="Settings"]')
+elements <- find_elements(shadow_rd, 'paper-tab[title="Settings"]')
+element$getElementText()
+library(shadowr)
+library(RSelenium)
+remDr <- RSelenium::remoteDriver(
+remoteServerAddr = "host.docker.internal",
+port = 4445 , browser = "chrome")
+remDr$open(silent = TRUE)
+remDr$navigate(url)
+shadow_rd <- shadow(remDr)
+element <- find_element(shadow_rd, 'input[title="The name of the employee"]')
+elements <- find_elements(shadow_rd, 'input[title="The name of the employee"]')
+element$getElementText()
+library(shadowr)
+library(RSelenium)
+remDr <- RSelenium::remoteDriver(
+ remoteServerAddr = "host.docker.internal",
+port = 4445 , browser = "chrome")
+remDr$open(silent = TRUE)
+remDr$navigate(url)
+shadow_rd <- shadow(remDr)
+element <- find_element(shadow_rd, "properties-page#settingsPage>textarea#textarea")
+element$getElementText()}
+}
 \seealso{
-\url{https://github.com/Ricardo281/shadowr} for examples
+\url{https://github.com/ricilandolt/shadowr} for examples
 }
 \keyword{shadow}
