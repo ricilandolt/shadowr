@@ -15,8 +15,6 @@
 \alias{get_all_shadow_element,shadow,webElement,character-method}
 \alias{get_parent_element}
 \alias{get_parent_element,shadow,webElement-method}
-\alias{get_child_elements}
-\alias{get_child_elements,shadow,webElement-method}
 \alias{get_sibling_element}
 \alias{get_sibling_element,shadow,webElement,character-method}
 \alias{get_previous_sibling_element}
@@ -56,10 +54,6 @@ get_all_shadow_element(shadowObject, element, css_selector)
 get_parent_element(shadowObject, element)
 
 \S4method{get_parent_element}{shadow,webElement}(shadowObject, element)
-
-get_child_elements(shadowObject, element)
-
-\S4method{get_child_elements}{shadow,webElement}(shadowObject, element)
 
 get_sibling_element(shadowObject, element, css_selector)
 
@@ -117,8 +111,6 @@ Selenium plugin to manage multiple levels of shadow elements on web page. Return
 \item \code{get_all_shadow_element,shadow,webElement,character-method}: Use this if you want to find all elements from parent
 
 \item \code{get_parent_element,shadow,webElement-method}: Use this to get the parent element if web element
-
-\item \code{get_child_elements,shadow,webElement-method}: Use this to get all the child elements of parent element
 
 \item \code{get_sibling_element,shadow,webElement,character-method}: Use this to get adjacent(sibling) element
 

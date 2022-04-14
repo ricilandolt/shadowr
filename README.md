@@ -49,9 +49,6 @@ Use this if you want to find all elements from parent DOM
 `get_parent_element(shadowObject, element)`:
 Use this to get the parent element if web element
 
-`get_child_elements(shadowObject, element)`:
-Use this to get all the child elements of parent element
-
 `get_sibling_element(shadowObject, element, css_selector)`:
 Use this to get adjacent(sibling) element using css selector
 

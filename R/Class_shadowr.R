@@ -297,25 +297,6 @@ setMethod(f="get_parent_element",
           }
 )
 
-#' @rdname shadow-class
-#' @export
-setGeneric(name="get_child_elements",
-           def=function(shadowObject,element)
-           {
-             standardGeneric("get_child_elements")
-           }
-)
-
-#' @describeIn  shadow-class Use this to get all the child elements of parent element
-#' @export
-setMethod(f="get_child_elements",
-          signature=c("shadow","webElement"),
-          definition=function(shadowObject,element)
-          {
-            command <-  "return getChildElements(arguments[0]);"
-            return(executor_get_object(shadowObject,command, element))
-          }
-)
 
 #' @rdname shadow-class
 #' @export
