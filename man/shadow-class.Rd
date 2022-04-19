@@ -10,9 +10,9 @@
 \alias{find_elements,shadow,character,missing-method}
 \alias{find_elements,shadow,character,webElement-method}
 \alias{get_shadow_element}
-\alias{get_shadow_element,shadow,webElement,character-method}
+\alias{get_shadow_element,shadow,character,webElement-method}
 \alias{get_all_shadow_element}
-\alias{get_all_shadow_element,shadow,webElement,character-method}
+\alias{get_all_shadow_element,shadow,character,webElement-method}
 \alias{get_parent_element}
 \alias{get_parent_element,shadow,webElement-method}
 \alias{get_sibling_element}
@@ -43,13 +43,13 @@ find_elements(shadowObject, css_selector, element)
 
 \S4method{find_elements}{shadow,character,webElement}(shadowObject, css_selector, element)
 
-get_shadow_element(shadowObject, element, css_selector)
+get_shadow_element(shadowObject, css_selector, element)
 
-\S4method{get_shadow_element}{shadow,webElement,character}(shadowObject, element, css_selector)
+\S4method{get_shadow_element}{shadow,character,webElement}(shadowObject, css_selector, element)
 
-get_all_shadow_element(shadowObject, element, css_selector)
+get_all_shadow_element(shadowObject, css_selector, element)
 
-\S4method{get_all_shadow_element}{shadow,webElement,character}(shadowObject, element, css_selector)
+\S4method{get_all_shadow_element}{shadow,character,webElement}(shadowObject, css_selector, element)
 
 get_parent_element(shadowObject, element)
 
@@ -106,9 +106,9 @@ Selenium plugin to manage multiple levels of shadow elements on web page. Return
 
 \item \code{find_elements,shadow,character,webElement-method}: Use this if you want to find all elements from parent object
 
-\item \code{get_shadow_element,shadow,webElement,character-method}: Use this if you want to find a single element from parent
+\item \code{get_shadow_element,shadow,character,webElement-method}: Use this if you want to find a single element from parent
 
-\item \code{get_all_shadow_element,shadow,webElement,character-method}: Use this if you want to find all elements from parent
+\item \code{get_all_shadow_element,shadow,character,webElement-method}: Use this if you want to find all elements from parent
 
 \item \code{get_parent_element,shadow,webElement-method}: Use this to get the parent element if web element
 

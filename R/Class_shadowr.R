@@ -83,7 +83,7 @@ setMethod(f="inject_shadow_executor",
                 if(grepl("TRUE|FALSE", result)){
                   result <- as.logical(result)
                 } else {
-                  result <- RSelenium::webElement$new(as.character(result))$import(shadowObject@driver)
+                  result <- list(RSelenium::webElement$new(as.character(result[[1]]))$import(shadowObject@driver))
                 }
               }
             } else if(length(result)>1){
@@ -107,7 +107,7 @@ setMethod(f="inject_shadow_executor",
                 if(grepl("TRUE|FALSE", result)){
                   result <- as.logical(result)
                 } else {
-                  result <- RSelenium::webElement$new(as.character(result))$import(shadowObject@driver)
+                  result <- list(RSelenium::webElement$new(as.character(result[[1]]))$import(shadowObject@driver))
                 }
               }
             } else if(length(result)>1){
@@ -165,7 +165,7 @@ setMethod(f="find_element",
             command <- paste0("return getObject('", css_selector, "');")
             element <- executor_get_object(shadowObject,command)
 
-            if(length(element$elementId)==0){
+            if(length(element)==0){
               stop(paste("Element with selector",css_selector, "is not in dom"))
             }
 
@@ -186,7 +186,7 @@ setMethod(f="find_element",
             element <- executor_get_object(shadowObject,command,element)
 
 
-            if(length(element$elementId)==0){
+            if(length(element)==0){
               stop(paste("Element with selector",css_selector, "is not in dom"))
             }
 
@@ -213,9 +213,7 @@ setMethod(f="find_elements",
           {
             command <- paste0("return getAllObject('", css_selector, "');")
             element <- executor_get_object(shadowObject,command)
-            if(length(element)==0){
-              stop(paste("Element with CSS",css_selector, "is not in dom"))
-            }
+
             return(element)
           }
 )
@@ -228,9 +226,7 @@ setMethod(f="find_elements",
           {
             command <- paste0("return getAllObject('", css_selector, "', arguments[0]);")
             element <- executor_get_object(shadowObject,command,element)
-            if(length(element)==0){
-              stop(paste("Element with CSS",css_selector, "is not in dom"))
-            }
+
             return(element)
           }
 )
@@ -239,7 +235,7 @@ setMethod(f="find_elements",
 #' @rdname shadow-class
 #' @export
 setGeneric(name="get_shadow_element",
-           def=function(shadowObject,element,css_selector)
+           def=function(shadowObject,css_selector, element)
            {
              standardGeneric("get_shadow_element")
            }
@@ -248,8 +244,8 @@ setGeneric(name="get_shadow_element",
 #' @describeIn  shadow-class Use this if you want to find a single element from parent
 #' @export
 setMethod(f="get_shadow_element",
-          signature=c("shadow","webElement","character"),
-          definition=function(shadowObject,element,css_selector)
+          signature=c("shadow","character","webElement"),
+          definition=function(shadowObject,css_selector,element)
           {
             command <- paste0("return getShadowElement(arguments[0], '", css_selector, "');")
             return(executor_get_object(shadowObject,command, element))
@@ -259,7 +255,7 @@ setMethod(f="get_shadow_element",
 #' @rdname shadow-class
 #' @export
 setGeneric(name="get_all_shadow_element",
-           def=function(shadowObject,element,css_selector)
+           def=function(shadowObject,css_selector,element)
            {
              standardGeneric("get_all_shadow_element")
            }
@@ -268,8 +264,8 @@ setGeneric(name="get_all_shadow_element",
 #' @describeIn  shadow-class Use this if you want to find all elements from parent
 #' @export
 setMethod(f="get_all_shadow_element",
-          signature=c("shadow","webElement","character"),
-          definition=function(shadowObject,element,css_selector)
+          signature=c("shadow","character","webElement"),
+          definition=function(shadowObject,css_selector,element)
           {
             command <- paste0("return getShadowElement(arguments[0], '", css_selector, "');")
             return(executor_get_object(shadowObject,command, element))
@@ -440,6 +436,7 @@ setMethod(f="is_visible",
             return(executor_get_object(shadowObject,command, element))
           }
 )
+
 
 
 

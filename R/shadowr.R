@@ -9,7 +9,7 @@
 #' @seealso
 #' \code{\link{shadow-class}} or
 #' \cr
-#' \url{https://github.com/Ricardo281/shadowr} for examples
+#' \url{https://github.com/ricilandolt/shadowr} for examples
 #' @export
 #'
 shadow <- function(driver){

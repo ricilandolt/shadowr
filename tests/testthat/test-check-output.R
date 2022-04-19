@@ -6,14 +6,28 @@ library(RSelenium)
 user <- "ricaradolandolt_wevNMz"
 pass <- "yP1NYPpdF22z1RjDqYHX"
 
+
+port <- 80
+ip <- paste0(user, ':', pass, "@hub.browserstack.com")
+extraCapabilities <- list(
+  'os_version'= '11',
+  'resolution'= '1920x1080',
+  'browser'= 'Chrome',
+  'browser_version' = 'latest',
+  'os' = 'Windows' )
+
+remDr <- remoteDriver$new(remoteServerAddr = ip, extraCapabilities = extraCapabilities,port=port)
+remDr$open(silent = TRUE)
+
+
+
 prepare_selenium <- function(user,pass){
   port <- 80
-  ip <- paste0(user, ':', pass, "@hub.browserstack.com")
-  extraCapabilities <- list("browser" = "chrome",
-                            "browser_version" = "latest",
-                            "os" = "Windows",
-                            "os_version" = "11",
-                            "browserstack.debug" = "true")
+  ip <- paste0(user, ':', pass, "@hub.lambdatest.com/wd/hub")
+  extraCapabilities <- list("browserName" = "chrome",
+                            "version" = "92.0",
+                            "platform" = "Windows 10",
+                            "resolution" = "1024x768")
 
   remDr <- remoteDriver$new(remoteServerAddr = ip, port = port
                             , extraCapabilities = extraCapabilities)
@@ -32,6 +46,12 @@ test_that("shadow() returns a object of class shadow", {
   expect_s4_class(shadow_rd, "shadow")
 })
 
+remDr <- prepare_selenium(user,pass)
+url <- "https://configure.bmw.ch/de_CH/configure/F40/7K31/FEGAT,P0300,S01CB,S01DF,S01DZ,S01TK,S0230,S0240,S0249,S02PA,S02VB,S0302,S0413,S0423,S0428,S0465,S0493,S04GN,S04NE,S0508,S0544,S05AQ,S05DA,S0654,S06AE,S06AF,S06AK,S06C4,S06U3,S06UX,S07CG,S07LC,S0851,S0879,S08KA,S08R9,S08TF,S08WC,S0962,S09QX,S0Z42,S0ZBC,S0ZBS,S0ZX4?expanded=true"
+remDr$navigate(url)
+Sys.sleep(3)
+shadow_rd <- shadow(remDr)
+element <- find_element(shadow_rd, 'div.sg-category.extended')
 
 # Test if shadow element is found in the dom
 test_that("find_element(shadow_rd, 'div.sg-category.extended') returns a object of class webElement", {

@@ -16,6 +16,6 @@ Selenium plugin to manage multiple levels of shadow elements on a web page.
 \seealso{
 \code{\link{shadow-class}} or
 \cr
-\url{https://github.com/Ricardo281/shadowr} for examples
+\url{https://github.com/ricilandolt/shadowr} for examples
 }
 \keyword{shadow}
