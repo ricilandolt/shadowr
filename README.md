@@ -132,5 +132,6 @@ element$getElementText()
   ```
   
   ###### Note: > is used to combine multi level dom structure. So you can combine 5 levels of dom. If you want some more level modify the script and ready to rock.
-  
+   
+   **Documentation** [Link](https://github.com/sukgu/pyshadow/wiki)
 
