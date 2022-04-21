@@ -74,7 +74,7 @@ Use this if you want to find visibility of element
  
 ## Installation
   ```
-  install.packages("tidyverse")
+  install.packages("shadowr")
 ```
 
 ## Selector:
