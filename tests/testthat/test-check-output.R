@@ -103,24 +103,24 @@ test_that("find_elements(shadow_rd, 'div') returns the parent webelement", {
 
 
 
-# Test if previous sibling shadow element is found in the dom
-test_that("get_previous_sibling_element(shadow_rd,element ) returns the previous sibling webelement", {
-  shadow_rd <- shadow(remDr)
-  reference_element <-  find_element(shadow_rd,"div.tile-details-container")
-  element <- find_element(shadow_rd,"div#tooltipContainer")
-  sib <- get_previous_sibling_element(shadow_rd,element )
-  expect_equal(reference_element$elementId, sib$elementId)
-})
-
-
-# Test if next sibling shadow element is found in the dom
-test_that("get_next_sibling_element(shadow_rd,element ) returns the next sibling webelement", {
-  shadow_rd <- shadow(remDr)
-  reference_element <-  find_element(shadow_rd,"con-accordion.accordion-group")
-  element <- find_element(shadow_rd,"div#tooltipContainer")
-  sib <- get_next_sibling_element(shadow_rd,element )
-  expect_equal(reference_element$elementId, sib$elementId)
-})
+# # Test if previous sibling shadow element is found in the dom
+# test_that("get_previous_sibling_element(shadow_rd,element ) returns the previous sibling webelement", {
+#   shadow_rd <- shadow(remDr)
+#   reference_element <-  find_element(shadow_rd,"div.tile-details-container")
+#   element <- find_element(shadow_rd,"div#tooltipContainer")
+#   sib <- get_previous_sibling_element(shadow_rd,element )
+#   expect_equal(reference_element$elementId, sib$elementId)
+# })
+#
+#
+# # Test if next sibling shadow element is found in the dom
+# test_that("get_next_sibling_element(shadow_rd,element ) returns the next sibling webelement", {
+#   shadow_rd <- shadow(remDr)
+#   reference_element <-  find_element(shadow_rd,"con-accordion.accordion-group")
+#   element <- find_element(shadow_rd,"div#tooltipContainer")
+#   sib <- get_next_sibling_element(shadow_rd,element )
+#   expect_equal(reference_element$elementId, sib$elementId)
+# })
 
 
 
