@@ -2,9 +2,8 @@
 The `shadowr` package enables to use the [shadow selenium plugin](https://github.com/sukgu/shadow-automation-selenium) to manage multi level shadow DOM elements on web page.
 
 [![R-CMD-check](https://github.com/ricilandolt/shadowr/workflows/R-CMD-check/badge.svg)](https://github.com/ricilandolt/shadowr/actions)
-[![codecov](https://codecov.io/gh/ricilandolt/shadowr/branch/master/graph/badge.svg?token=lLHxbUQ7cG)](https://codecov.io/gh/ricilandolt/shadowr)
+[![codecov](https://codecov.io/gh/ricilandolt/shadowr/branch/master/graph/badge.svg)](https://codecov.io/github/ricilandolt/shadowr?branch=master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
 
 
 ## Shadow DOM:
