@@ -1,12 +1,17 @@
-# shadowr
-The `shadowr` package enables to use the [shadow selenium plugin](https://github.com/sukgu/shadow-automation-selenium) to manage multi level shadow DOM elements on web page.
+# shadowr <img src='inst/figures/shadowlogo.png' align="right" height="139" />
 
+<!-- badges: start -->
 [![R-CMD-check](https://github.com/ricilandolt/shadowr/workflows/R-CMD-check/badge.svg)](https://github.com/ricilandolt/shadowr/actions)
 [![codecov](https://codecov.io/gh/ricilandolt/shadowr/branch/master/graph/badge.svg)](https://codecov.io/github/ricilandolt/shadowr?branch=master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/shadowr)](https://cran.r-project.org/package=shadowr)
+<!-- badges: end -->
 
-## Shadow DOM:
+
+
+## Overview:
+The `shadowr` package enables to use the [shadow selenium plugin](https://github.com/sukgu/shadow-automation-selenium) to manage multi level shadow DOM elements on web page.
+
 Shadow DOM is a web standard that offers component style and markup encapsulation. It is a critically important piece of the Web Components story as it ensures that a component will work in any environment even if other CSS or JavaScript is at play on the page.
 
 ## Custom HTML Tags:
