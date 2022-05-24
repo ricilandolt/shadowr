@@ -1,7 +1,7 @@
 Package: shadowr
 Type: Package
 Title: Selenium Plugin to Manage Multi Level Shadow Elements on Web Page
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(person("Ricardo","Landolt", email = "ricardo.landolt1@gmail.com", role
         = c("cre","aut")), person("Sushil", "Gupta", email =
         "Michiel.Stock@UGent.be", role = "ctb",comment="shadow-automation-selenium plugin"))
